@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lies of P | El Cuento Más Oscuro</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --text-main: #c5c6c7;
+            --gold-accent: #d4af37;
+            --blood-red: #8a0303;
+            --panel-bg: rgba(31, 40, 51, 0.85);
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at center, #1a1a24 0%, #0b0c10 100%);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.5), var(--bg-color));
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: var(--gold-accent);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #000;
+            border-bottom: 1px solid var(--gold-accent);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            transition: color 0.3s, text-shadow 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: var(--blood-red);
+            text-shadow: 0 0 8px var(--blood-red);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--panel-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: var(--gold-accent);
+            font-size: 2.2rem;
+            border-bottom: 1px solid var(--gold-accent);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .info-card {
+            border-left: 4px solid var(--blood-red);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-card h3 {
+            color: var(--blood-red);
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-badge {
+            background: var(--gold-accent);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #000;
+            color: var(--gold-accent);
+            font-family: 'Cinzel', serif;
+            border-top: 1px solid var(--gold-accent);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Lies of P</h1>
+    <p>"Mentir es la única forma de volverse humano"</p>
+</header>
+
+<nav>
+    <a href="#historia">La Tragedia de Krat</a>
+    <a href="#atributos">Guía de Atributos</a>
+    <a href="#progresion">Sistema de Progresión</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<div class="container">
+
+    <!-- SECCIÓN DE HISTORIA -->
+    <section id="historia">
+        <h2>La Tragedia de la Belle Époque</h2>
+        <p>El juego nos transporta a <strong>Krat</strong>, una ciudad que una vez fue el pináculo de la humanidad gracias al descubrimiento del "Ergo", una misteriosa fuente de energía. Este recurso permitió la creación de las marionetas, autómatas diseñados para servir a los humanos bajo el estricto Gran Pacto.</p>
+        
+        <p>Sin embargo, la utopía se desmoronó. Las marionetas enloquecieron en un evento conocido como el <em>Frenesí de las Marionetas</em>, masacrando a la población. Simultáneamente, una enfermedad letal llamada la Enfermedad de la Petrificación comenzó a diezmar a los sobrevivientes. Tú despiertas como una marioneta especial creada por Geppetto, con la misión de encontrarlo y salvar la ciudad.</p>
+    </section>
+
+    <!-- SECCIÓN DE ATRIBUTOS Y BUILDS (NUEVA) -->
+    <section id="atributos">
+        <h2>Guía de Atributos y Escalado</h2>
+        <p>Para sobrevivir en Krat, necesitas optimizar tus estadísticas según tu estilo de juego. El daño de tus armas escala basándose en tres atributos principales:</p>
+
+        <div class="info-card">
+            <h3>Motricidad (Fuerza) <span class="stat-badge">Armas Pesadas</span></h3>
+            <p>Ideal para jugadores que prefieren bloquear ataques y hacer un daño masivo por golpe. Las armas de Motricidad suelen ser grandes espadas, martillos y llaves inglesas gigantes. Tienen animaciones más lentas pero un alto poder de aturdimiento (Stagger).</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Técnica (Destreza) <span class="stat-badge">Armas Rápidas</span></h3>
+            <p>Enfocado en la velocidad, la evasión y conectar múltiples golpes en poco tiempo. Excelente para estoques, sables y dagas. Permite un estilo de juego mucho más ágil y centrado en castigar las ventanas de vulnerabilidad de los jefes.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Avance (Daño Elemental) <span class="stat-badge">Estados Alterados</span></h3>
+            <p>Aumenta el daño de las armas que causan daño elemental y la velocidad a la que aplicas estados alterados. Los tres elementos del juego son:</p>
+            <ul>
+                <li><strong>Electricidad (Blitz):</strong> Letal contra las marionetas.</li>
+                <li><strong>Fuego (Overheat):</strong> Altamente efectivo contra monstruos orgánicos y bestias.</li>
+                <li><strong>Ácido (Decay):</strong> Destruye armaduras y es efectivo contra humanos alterados.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROGRESIÓN (NUEVA) -->
+    <section id="progresion">
+        <h2>Sistema de Progresión Avanzado</h2>
+        <p>Más allá de subir de nivel, *Lies of P* cuenta con sistemas únicos para personalizar a tu personaje y adaptarlo a los combates más difíciles.</p>
+
+        <div class="info-card">
+            <h3>El Órgano P (Árbol de Habilidades)</h3>
+            <p>A medida que encuentras Cuarzo en el mundo, puedes insertarlo en el "Órgano P", el corazón mecánico del protagonista. Esto desbloquea habilidades pasivas vitales como:</p>
+            <ul>
+                <li>Aumentar la cantidad de Células de Pulso (pociones de curación).</li>
+                <li>Habilitar la evasión doble (Link Dodge).</li>
+                <li>Mejorar el daño crítico o reducir el daño recibido al esquivar.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Brazos de Legión (Legion Arms)</h3>
+            <p>Tu brazo izquierdo es una prótesis intercambiable que ofrece utilidad táctica en combate. Puedes equipar herramientas como el <em>Puppet String</em> (para atraer enemigos hacia ti o impulsarte hacia ellos), el <em>Flamberge</em> (un lanzallamas para control de multitudes) o el <em>Aegis</em> (un escudo explosivo ideal para bloqueos perfectos).</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CURIOSIDADES -->
+    <section id="curiosidades">
+        <h2>Curiosidades del Sistema</h2>
+        
+        <div class="info-card">
+            <h3>El Sistema de Mentiras y Humanidad</h3>
+            <p>A diferencia de otras marionetas atadas por el Gran Pacto (que les prohíbe mentir), el protagonista tiene la capacidad de elegir. Mentir genera "calor" en tu sistema mecánico. Cuantas más decisiones humanas tomes (mentir para proteger a alguien, escuchar discos de vinilo), más cambiará tu naturaleza, afectando qué finales puedes desbloquear.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Ensamble de Armas Custom</h3>
+            <p>Puedes separar las hojas y las empuñaduras de casi todas las armas convencionales. La hoja determina el tipo de daño y el ataque especial (Fable Art), mientras que la empuñadura define el set de movimientos (animaciones) y con qué atributo escala el arma. Esto abre la puerta a cientos de combinaciones tácticas.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Proyecto Web No Oficial - Archivos y Mecánicas de Krat</p>
+    <p>&copy; 2026</p>
+</footer>
+
+</body>
+</html>
