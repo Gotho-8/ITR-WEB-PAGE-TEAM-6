@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual del Desarrollador Indie | Guía Pro</title>
+    <style>
+        /* Animación de fondo vivo */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            color: #ffffff;
+            /* Fondo con movimiento */
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        nav a {
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            padding: 3rem;
+            border-radius: 24px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.5);
+        }
+
+        h2 { color: #00f2fe; font-size: 2rem; margin-top: 0; }
+        h3 { color: #4facfe; margin-top: 1.5rem; }
+
+        .highlight-box {
+            background: rgba(79, 172, 254, 0.1);
+            border-left: 4px solid #4facfe;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .media-placeholder {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px dashed rgba(0, 242, 254, 0.3);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            color: #4facfe;
+            margin: 1.5rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 2rem 0;
+            box-shadow: 0 <10px 30px rgba(0,0,0,0.5);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width<: 100%; height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            background: rgba(0,0,0,0.4);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Manual del Desarrollador Indie</h1>
+    <p>Guía definitiva para dominar el arte del videojuego 2D[cite: 1]</p>
+</header>
+
+<nav>
+    <a href="#proceso">Creatividad</a>
+    <a href="#pixelorama">Pixel Art</a>
+    <a href="#tiled">Niveles</a>
+    <a href="#gdevelop">Lógica</a>
+</nav>
+
+<div class="container">
+
+    <!-- SECCIÓN 1: PROCESO CREATIVO -->
+    <section id="proceso">
+        <h2>1. El Proceso Creativo: Planeación Estratégica</h2>
+        <p>Antes de tocar una sola línea de código, la planeación define si tu juego será memorable o simplemente uno más del montón[cite: 1].p>
+        
+        <div class="highlight-box">
+            <strong>Lluvia de Ideas (Brainstorming):</strong> No te limites. Define un concepto central (ej. un mundo post-apocalíptico) y una mecánica única que haga que tu juego destaque[cite: 1].
+        </div>
+
+        <h3>El GDD (Documento de Diseño)</h3>
+        <p>El GDD es tu biblia. Aquí debes plasmar desde los bocetos de tus personajes hasta la curva de dificultad[cite: 1]. Dibujar en papel te ayuda a visualizar las proporciones antes de pasarlas a la computadora[cite: 1].</p>
+        
+        <div class="media-placeholder">
+            [Inserta aquí la imagen de tus bocetos iniciales]
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: PIXELORAMA -->
+    <section id="pixelorama">
+        <h2>2. Arte y< Animación con Pixelorama</h2>
+        <p>Pixelorama es una herramienta de código abierto diseñada para artistas que buscan eficiencia sin sacrificar potencia[cite: 1].</p>
+        
+        <ul>
+            <li><strong>Lienzos Optimizados:</strong> Comienza con tamaños de 16x16 o 32x32 para un estilo retro auténtico[cite: 1].</li>
+            <li><strong>Capas y Animación:</strong> Usa capas para separar el lineart del color y aprovecha el sistema de celdas para animar cuadros de movimiento (caminar, saltar, atacar)[cite: 1].</li>
+            <li><strong>Exportación:</strong> Exporta siempre como .PNG transparente en formato de "Sprite Sheet" para que el motor de juego lo procese fácilmente[cite: 1].</li>
+        </ul>
+
+        <div class="video-container">
+            <!-- Espacio para tutorial de Pixelorama -->
+            <iframe src="[https://www.youtube.com/embed/dQw4w9WgXcQ](https://www.youtube.com/embed/dQw4w9WgXcQ)" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: TILED MAP EDITOR -->
+    <section id="tiled">
+        <h2>3. Diseño de Escenarios en Tiled</h2>
+        <p>Tiled es el estándar gratuito para diseñar niveles mediante mapas de mosaicos (tilesets)[cite: 1].p>
+        
+        <h3>¿Por qué usar Tiled?</h3>
+        <p>Permite "pintar" niveles complejos rápidamente usando la hoja de sprites que creaste en Pixelorama[cite: 1]. Puedes crear capas de decoración y, lo más importante, capas de colisión para que tu personaje no atraviese las paredes[cite: 1].</p>
+        
+        <div class="media-placeholder">
+            [Captura de pantalla: Tu nivel siendo construido en Tiled]
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: GDEVELOP -->
+    <section id="gdevelop">
+        <h2>4. Lógica de Juego en GDevelop</h2>
+        <p>GDevelop permite que cualquiera cree videojuegos profesionales sin saber programar código tradicional, usando un sistema intuitivo de eventos y condiciones[cite: 1].</p>
+        
+        <div class="highlight-box">
+            <strong>Flujo de trabajo:</strong> Importas tu mapa de Tiled, asignas los sprites animados de Pixelorama y usas "Comportamientos" (Behaviors) para darle físicas de plataforma a tu héroe automáticamente[cite: 1].
+        </div>
+
+        <h3>Eventos Visuales:</h3>
+        <p>Configura la lógica: "Si el jugador presiona Flecha Derecha" → "Mover personaje" y "Reproducir animación de correr"[cite: 1].</p>
+
+        <div class="media-placeholder">
+            [Imagen: Ejemplo de la ventana de eventos de GDevelop]
+        </div>
+    section>
+
+</div>
+
+<footer>
+    <p>Manual del Desarrollador Indie - Guía Práctica de Inicio Paso a Paso[cite: 1]</p>
+    <p>&copy; 2026 | Desarrollado con pasión</p>
+</footer>
+
+</body>
+</html>
+ tienen un fondo semi-transparente con desenfoque (`backdrop-filter`), lo que hace que el contenido resalte sobre el fondo animado[cite: 1].
+3.  **Información Expandida:** Se agregaron detalles técnicos sobre el uso de **Sprite Sheets**, capas de colisión en **Tiled** y la importancia de la curva de dificultad en el **GDD**[cite: 1].
+4.  **Interactividad Visual:** Al pasar el ratón sobre las secciones, estas se elevan ligeramente, haciendo que la navegación sea más dinámica[cite: 1].
