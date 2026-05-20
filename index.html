@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual del Desarrollador Indie | Guía Pro</title>
+    <style>
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            color: #ffffff;
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        nav a {
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            padding: 3rem;
+            border-radius: 24px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.5);
+        }
+
+        h2 { color: #00f2fe; font-size: 2rem; margin-top: 0; }
+        h3 { color: #4facfe; margin-top: 1.5rem; }
+
+        .highlight-box {
+            background: rgba(79, 172, 254, 0.1);
+            border-left: 4px solid #4facfe;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Estilos para las imágenes */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: block;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            background: rgba(0,0,0,0.4);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Manual del Desarrollador Indie</h1>
+    <p>Crea tu primer juego con Pixelorama, Tiled y GDevelop[cite: 1]</p>
+</header>
+
+<nav>
+    <a href="#proceso">Creatividad</a>
+    <a href="#pixelorama">Pixel Art</a>
+    <a href="#tiled">Niveles</a>
+    <a href="#gdevelop">Lógica</a>
+</nav>
+
+<div class="container">
+
+    <!-- SECCIÓN 1: PROCESO CREATIVO -->
+    <section id="proceso">
+        <h2>1. El Proceso Creativo: Planeación Estratégica</h2>
+        <p>Todo gran juego nace de una idea simple. Antes de abrir cualquier software, necesitas definir el alma de tu proyecto mediante una planeación sólida[cite: 1].</p>
+        
+        <div class="highlight-box">
+            <strong>Lluvia de Ideas:</strong> Define las bases. Por ejemplo, si estás planeando un platformer de 4 niveles, debes tener muy claras tus mecánicas de fluidez de movimiento desde el inicio.
+        </div>
+
+        <h3>Bocetos y Documento de Diseño (GDD)</h3>
+        <p>Dibuja tus personajes, enemigos y primeros niveles en papel o una tableta digital[cite: 1]. En tu GDD es vital definir con detalle el funcionamiento del salto, el wall-jump o el dash para asegurar una experiencia dinámica.</p>
+        
+        <!-- IMAGEN DE MARCADOR DE POSICIÓN -->
+        <img src="https://placehold.co/900x450/1e1e2f/00f2fe?text=Bocetos+y+GDD+del+Platformer" alt="Bocetos de niveles y GDD">
+    </section>
+
+    <!-- SECCIÓN 2: PIXELORAMA -->
+    <section id="pixelorama">
+        <h2>2. Arte y Animación con Pixelorama</h2>
+        <p>Pixelorama es una herramienta gratuita y de código abierto sumamente potente para crear Pixel Art[cite: 1].</p>
+        
+        <ul>
+            <li><strong>Configuración del lienzo:</strong> Crea un archivo nuevo con un tamaño de cuadrícula base, preferiblemente de 16x16 o 32x32 píxeles para mantener un estilo retro limpio[cite: 1].</li>
+            <li><strong>Capas y Animación:</strong> Organiza bien tu hoja de sprites. Necesitarás animaciones fluidas para todos los estados de tu personaje: idle, run, jump y dash.</li>
+            <li><strong>Exportación:</strong> Guarda tus hojas de sprites y tilesets en formato .PNG con fondo transparente[cite: 1].</li>
+        </ul>
+
+        <!-- IMAGEN DE MARCADOR DE POSICIÓN -->
+        <img src="https://placehold.co/900x300/1e1e2f/00f2fe?text=Sprite+Sheet:+Idle,+Run,+Jump,+Dash" alt="Hojas de sprites de animaciones">
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: TILED MAP EDITOR -->
+    <section id="tiled">
+        <h2>3. Diseño de Escenarios en Tiled</h2>
+        <p>Tiled te permite importar la hoja de sprites (.PNG) que exportaste desde Pixelorama, definir el tamaño de la cuadrícula y "pintar" tus escenarios de forma rápida usando capas de patrones visuales y capas de colisión[cite: 1].</p>
+        
+        <h3>Flujo de Trabajo:</h3>
+        <p>Diseñar un nivel con fluidez mecánica requiere pensar bien los espacios. Asegúrate de colocar las plataformas y paredes a distancias óptimas para que el jugador pueda encadenar saltos y dashes.</p>
+        
+        <!-- IMAGEN DE MARCADOR DE POSICIÓN -->
+        <img src="https://placehold.co/900x500/1e1e2f/00f2fe?text=Tiled:+Construyendo+el+Nivel+1" alt="Diseño del primer nivel en Tiled">
+    </section>
+
+    <!-- SECCIÓN 4: GDEVELOP -->
+    <section id="gdevelop">
+        <h2>4. Lógica de Juego en GDevelop</h2>
+        <p>GDevelop es un motor de videojuegos excelente que destaca por su sistema basado en eventos y condiciones, eliminando la necesidad de escribir código complejo de forma tradicional[cite: 1].</p>
+        
+        <div class="highlight-box">
+            <strong>Configuración del Personaje:</strong> Importa los sprites de animación de Pixelorama para los estados de reposo (Idle), correr y saltar[cite: 1]. Aquí es donde darás vida al wall-jump usando las condiciones del motor.
+        </div>
+
+        <!-- IMAGEN DE MARCADOR DE POSICIÓN -->
+        <img src="https://placehold.co/900x450/1e1e2f/00f2fe?text=GDevelop:+Programando+el+Wall-Jump+y+Dash" alt="Eventos en GDevelop">
+    </section>
+
+</div>
+
+<footer>
+    <p>Manual del Desarrollador Indie - Guía Práctica de Inicio Paso a Paso[cite: 1]</p>
+</footer>
+
+</body>
+</html>
